@@ -2,7 +2,7 @@
 
 O **CSGO Planner** é uma plataforma online projetada para ajudar jogadores de **CS:GO** e **CS2** a criar e visualizar táticas de forma colaborativa. Com uma interface intuitiva e várias ferramentas interativas, o CSGO Planner permite desenvolver e compartilhar estratégias de jogo de maneira eficiente, melhorando a comunicação entre os membros da equipe e otimizando o planejamento das partidas.
 
-(https://img.youtube.com/vi/AndfBvQjMxQ&ab_channel=LucasDiniz👍.jpg)](https://www.youtube.com/watch?v=AndfBvQjMxQ&ab_channel=LucasDiniz👍)
+(https://img.youtube.com/vi/AndfBvQjMxQ)](https://www.youtube.com/watch?v=AndfBvQjMxQ)
 
 ## Funcionalidades
 
