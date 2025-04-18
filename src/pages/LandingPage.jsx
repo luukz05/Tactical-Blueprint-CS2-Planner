@@ -192,18 +192,14 @@ export default function LandingPage() {
         }}
       >
         <TituloSection2> HOW TO USE THE PLANNER</TituloSection2>
-        <div>
-          <iframe
-            width="1100"
-            height="621"
-            style={{ borderRadius: "15px" }}
-            src="https://www.youtube.com/embed/AndfBvQjMxQ?rel=0"
-            title="Demo Tactical Blueprint - Pistol Mirage"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <iframe
+          width="1100"
+          height="621"
+          style={{ borderRadius: "15px" }}
+          src="https://www.youtube.com/embed/AndfBvQjMxQ?rel=0"
+          title="Demo Tactical Blueprint - Pistol Mirage"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
         <LinkCanvas href="/canvas">GO TO PLANNER</LinkCanvas>
       </div>
     </>

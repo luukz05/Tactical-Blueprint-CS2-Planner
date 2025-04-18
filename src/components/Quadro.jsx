@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import io from "socket.io-client";
 import styled from "styled-components";
 
 const Title = styled.input`
@@ -41,8 +40,6 @@ const BotaoFunc = styled.button`
   align-items: center;
 `;
 
-const socket = io("http://localhost:3000");
-
 export default function Quadro({ ImagemFundo, Cor, Linha, Espessura }) {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -73,7 +70,6 @@ export default function Quadro({ ImagemFundo, Cor, Linha, Espessura }) {
 
   const handleMouseMove = (e) => {
     if (!isDrawing) return;
-    socket.emit("lines", lines);
     const { clientX, clientY } = e;
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
@@ -133,16 +129,6 @@ export default function Quadro({ ImagemFundo, Cor, Linha, Espessura }) {
       ctx.stroke();
     });
   }, [lines, Cor, Espessura, Linha]);
-
-  useEffect(() => {
-    socket.on("lines", (newLines) => {
-      setLines(newLines);
-    });
-
-    return () => {
-      socket.off("lines");
-    };
-  }, []);
 
   const handleClearCanvas = () => {
     const canvas = canvasRef.current;
