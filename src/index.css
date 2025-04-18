@@ -1,13 +1,309 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  text-transform: uppercase;
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(39, 55, 77);
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(39, 55, 77);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(53, 76, 109);
+  /* border-radius: 10px; */
+  /* border: 3px solid #ffffff; */
+}
+label {
+  margin-top: 8px;
+  text-align: center;
+}
+a {
+  background-color: #526d82;
+}
+ul,
+li {
+  appearance: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+div.ToolBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+button {
+  outline: none;
+  border: none;
+  height: auto;
+  width: auto;
+  background-color: #526d82;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+
+/* Grossura */
+
+input.TextoGrossura {
+  background-color: #27374d;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  color: #eee;
+  height: 45px;
+  width: 45px;
+  font-size: 20px;
+  border: none;
+  transition: 1s;
+  border-radius: 5px;
+  text-align: center;
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+
+input.TextoDraggable {
+  background-color: #27374d;
+
+  font-family: "Montserrat", sans-serif;
+  padding: 1px;
+  color: #eee;
+  height: 15px;
+  font-size: 13px;
+  width: 100px;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  transition: 1s;
+  border: solid 2px #eeeeee;
+  text-align: center;
+  z-index: 999;
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+
+div.ContainerTexto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Granadas */
+
+img.ImageGrenades {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Cores */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+input.Cores {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 135px;
+  height: 135px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0;
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+
+input.Cores::-webkit-color-swatch {
+  border-radius: 10px;
+  border: none;
+  color: #eee;
+}
+input.Cores::placeholder {
+  color: #eee;
+  opacity: 1;
+}
+
+button.Amarelo {
+  background-color: #e9e803;
+  &:hover {
+    background-color: #fcfc92;
+  }
+}
+button.Verde {
+  background-color: #088446;
+  &:hover {
+    background-color: #47976f;
+  }
+}
+button.Laranja {
+  background-color: #dd4f06;
+  &:hover {
+    background-color: #d89e82;
+  }
+}
+button.Branco {
+  background-color: #f1f1f1;
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}
+button.Roxo {
+  background-color: #720474;
+  &:hover {
+    background-color: #785479;
+  }
+}
+button.Azul {
+  background-color: #6593ca;
+  &:hover {
+    background-color: #a9b9cc;
+  }
+}
+img.ImageGames {
+  height: 70px;
+  width: 150px;
+  transition: 1s;
+  border-radius: 15px;
+  &:hover {
+    transform: scale(1.15);
+    transition: 1s;
+    cursor: pointer;
+  }
+}
+
+img.Logo {
+  height: 100px;
+  width: 100px;
+}
+canvas {
+  background-color: #27374d;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 265px);
+  background-size: 571px;
+}
+
+div.Molotov,
+div.Smoke,
+div.Flash,
+div.Decoy,
+div.HE,
+div.C4,
+div.Defuse {
+  height: 35px;
+  width: 35px;
+  background-position: center;
+  background-size: contain;
+  border-radius: 10px;
+  display: flex;
+  z-index: 1;
+  /* box-shadow: 0px 0px 8px #4f8ca88c; */
+  border: solid 2px #eee;
+  &:hover {
+    cursor: pointer;
+  }
+}
+div.Molotov {
+  background-image: url("../public/molly.png");
+}
+div.Smoke {
+  background-image: url("../public/smoke.png");
+}
+div.Flash {
+  background-image: url("../public/flash.png");
+}
+div.Decoy {
+  background-image: url("../public/decoy.png");
+}
+div.HE {
+  background-image: url("../public/he.png");
+}
+div.C4 {
+  background-image: url("../public/c4.png");
+  margin-bottom: 15px;
+}
+div.Defuse {
+  background-image: url("../public/defuse.png");
+}
+div.Brush {
+  margin-top: 4px;
+}
+div.BGAncient {
+  background-image: url("../public/map_icon_de_ancient.png");
+  background-size: cover;
+  background-position: center;
+  height: 5vh;
+}
+div.BGAnubis {
+  background-image: url("../public/map_icon_de_anubis.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGDust2 {
+  background-image: url("../public/map_icon_de_dust2.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGInferno {
+  background-image: url("../public/map_icon_de_inferno.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGMirage {
+  background-image: url("../public/map_icon_de_mirage.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGNuke {
+  background-image: url("../public/map_icon_de_nuke.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGOverpass {
+  background-image: url("../public/map_icon_de_overpass.png");
+  background-size: cover;
+  background-position: center;
+}
+div.BGVertigo {
+  background-image: url("../public/map_icon_de_vertigo.png");
+  background-size: cover;
+  background-position: center;
 }
