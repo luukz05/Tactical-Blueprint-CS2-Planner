@@ -2,7 +2,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  /* background-image: url("https://cdn.discordapp.com/attachments/968229431988604940/1113230254237028453/image.png"); */
+
   background-repeat: no-repeat;
   background-position: center;
   text-transform: uppercase;
@@ -294,4 +294,3 @@ div.BGVertigo {
   background-size: cover;
   background-position: center;
 }
-/* /////////////////////////////////////////////////////////////////////////////// */
