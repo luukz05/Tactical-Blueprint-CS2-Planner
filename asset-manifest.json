@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Tactical-Blueprint-CS2-Planner/static/js/main.33743577.js",
-    "index.html": "/Tactical-Blueprint-CS2-Planner/index.html",
-    "main.33743577.js.map": "/Tactical-Blueprint-CS2-Planner/static/js/main.33743577.js.map"
+    "main.js": "https://luukz05.github.io/Tactical-Blueprint-CS2-Planner/static/js/main.8a6792e2.js",
+    "index.html": "https://luukz05.github.io/Tactical-Blueprint-CS2-Planner/index.html",
+    "main.8a6792e2.js.map": "https://luukz05.github.io/Tactical-Blueprint-CS2-Planner/static/js/main.8a6792e2.js.map"
   },
   "entrypoints": [
-    "static/js/main.33743577.js"
+    "static/js/main.8a6792e2.js"
   ]
 }
