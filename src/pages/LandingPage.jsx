@@ -1,17 +1,6 @@
 import NavBarLP from "../componentsLP/NavBarLP";
 import styled from "styled-components";
 
-const Modelo = styled.div`
-  background: rgb(23, 36, 51);
-  /* background: linear-gradient(180deg, rgba(23,36,51,1) 0%, rgba(35,105,130,1) 100%); */
-
-  display: flex;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-`;
 const Barra = styled.div`
   /* background-color: #5c0404; */
   background-image: url("https://images8.alphacoders.com/736/736302.png");
@@ -99,21 +88,14 @@ const TituloSection2 = styled.label`
   color: #eeeeee;
   text-align: center;
   font-size: 50px;
-  font-weight: bold;
-  background-color: magenta;
-  background-image: url(https://skinsmonkey.com/blog/wp-content/uploads/sites/2/csgo-wallpaper-full-1-scaled.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 93.5%;
-  padding: 50px;
-  height: 110vh;
+
   margin: 0;
   margin-bottom: 0;
+  z-index: 1;
 `;
 export default function LandingPage() {
   return (
-    <Modelo style={{ overflow: "auto", cursor: "auto" }}>
+    <>
       <Teste>
         <Barra>
           <NavBarLP />
@@ -124,63 +106,54 @@ export default function LandingPage() {
       <Content>
         <TituloSection>
           MAPS AVALIABLE
-          <Mapas style={{ marginTop: "45px", marginBottom: "15px" }}>
-            <BGButton className="BGAncient">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148533777633351/map_icon_de_ancient.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGAnubis">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148563246829679/map_icon_de_anubis.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGDust2">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148621077893130/map_icon_de_dust2.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGInferno">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148643588710481/map_icon_de_inferno.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGMirage">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148666120519720/map_icon_de_mirage.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGNuke">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148691412156436/map_icon_de_nuke.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGOverpass">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148717215535174/map_icon_de_overpass.png"
-                alt=""
-              />
-            </BGButton>
-            <BGButton className="BGVertigo">
-              <ImagemBotao
-                className="ImageMaps"
-                src="https://cdn.discordapp.com/attachments/1120847328723611689/1121148747041222676/map_icon_de_vertigo.png"
-                alt=""
-              />
-            </BGButton>
+          <Mapas style={{ marginTop: "5vh", marginBottom: "5vh" }}>
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_ancient.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_anubis.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_dust2.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_inferno.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_mirage.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_nuke.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_overpass.png"
+              alt=""
+            />
+
+            <ImagemBotao
+              className="ImageMaps"
+              src="./map_icon_de_vertigo.png"
+              alt=""
+            />
           </Mapas>
         </TituloSection>
 
@@ -202,15 +175,28 @@ export default function LandingPage() {
           </div>
         </TituloSection>
       </Content>
-
-      <TituloSection2>
-        {" "}
-        HOW TO USE THE PLANNER
+      <div
+        style={{
+          display: "flex",
+          backgroundImage:
+            "url('https://skinsmonkey.com/blog/wp-content/uploads/sites/2/csgo-wallpaper-full-1-scaled.jpg')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "top",
+          height: "85vh",
+          width: "100%",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "5vh",
+        }}
+      >
+        <TituloSection2> HOW TO USE THE PLANNER</TituloSection2>
         <div>
           <iframe
             width="1100"
             height="621"
-            style={{ borderRadius: "15px", marginTop: "49px" }}
+            style={{ borderRadius: "15px" }}
             src="https://www.youtube.com/embed/AndfBvQjMxQ?rel=0"
             title="Demo Tactical Blueprint - Pistol Mirage"
             frameborder="0"
@@ -219,7 +205,7 @@ export default function LandingPage() {
           ></iframe>
         </div>
         <LinkCanvas href="/canvas">GO TO PLANNER</LinkCanvas>
-      </TituloSection2>
-    </Modelo>
+      </div>
+    </>
   );
 }

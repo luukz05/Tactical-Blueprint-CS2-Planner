@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import io from "socket.io-client";
 import styled from "styled-components";
 
 const Title = styled.input`
-  width: 821.05px;
+  width: 62.8vw;
   background-color: #213044;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #eee;
   font-size: 15px;
   display: block;
@@ -20,12 +20,13 @@ const Title = styled.input`
     transition: 1s;
     cursor: pointer;
   }
-`
+`;
 
 const BotaoFunc = styled.button`
-  font-family: 'Montserrat', sans-serif;
-  padding: 10px;
-  color: #DDE6ED;
+  font-family: "Montserrat", sans-serif;
+  height: 5vh;
+  width: 7vh;
+  color: #dde6ed;
   border: none;
   outline: inherit;
   /* border-radius:5px; */
@@ -33,11 +34,12 @@ const BotaoFunc = styled.button`
   transition: 1s;
   text-align: center;
   &:hover {
-    transform: scale(1.1);
-    transition: 1s;
     cursor: pointer;
   }
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const socket = io("http://localhost:3000");
 
@@ -45,7 +47,7 @@ export default function Quadro({ ImagemFundo, Cor, Linha, Espessura }) {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lines, setLines] = useState([]);
-   // eslint-disable-next-line
+  // eslint-disable-next-line
   const [history, setHistory] = useState([]);
   const [redoHistory, setRedoHistory] = useState([]);
 
@@ -169,30 +171,46 @@ export default function Quadro({ ImagemFundo, Cor, Linha, Espessura }) {
   };
 
   return (
-    <TransformWrapper initialScale={1}
-      initialPositionX={0} initialPositionY={0} panning={{ disabled: true }}
+    <TransformWrapper
+      initialScale={1}
+      initialPositionX={0}
+      initialPositionY={0}
+      panning={{ disabled: true }}
       disabled
     >
       <TransformComponent>
-
         <Title type="text" placeholder="Title" className="TituloCanvas"></Title>
-        <BotaoFunc onClick={handleClearCanvas} style={{ backgroundColor: "#526D82" }}>
-          CLEAR
-        </BotaoFunc>
-        <BotaoFunc onClick={handleUndo} style={{ backgroundColor: "#89a5b6" }}>
-          UNDO
-        </BotaoFunc>
-        <BotaoFunc onClick={handleRedo} style={{ backgroundColor: "#9DB2BF" }}>
-          REDO
-        </BotaoFunc>
+        <div className="" style={{ display: "flex" }}>
+          <BotaoFunc
+            onClick={handleClearCanvas}
+            style={{ backgroundColor: "#526D82" }}
+          >
+            CLEAR
+          </BotaoFunc>
+          <BotaoFunc
+            onClick={handleUndo}
+            style={{ backgroundColor: "#89a5b6" }}
+          >
+            UNDO
+          </BotaoFunc>
+          <BotaoFunc
+            onClick={handleRedo}
+            style={{ backgroundColor: "#9DB2BF" }}
+          >
+            REDO
+          </BotaoFunc>
+        </div>
         <canvas
           ref={canvasRef}
-          style={{ backgroundImage: `url(${ImagemFundo})` , cursor:"crosshair"}}
+          style={{
+            backgroundImage: `url(${ImagemFundo})`,
+            cursor: "crosshair",
+            marginTop: "7vh",
+          }}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
         ></canvas>
-
       </TransformComponent>
     </TransformWrapper>
   );
