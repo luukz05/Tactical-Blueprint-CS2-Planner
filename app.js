@@ -1,10 +1,17 @@
 const express = require("express");
-const app = require("express")();
-const server = require("http").createServer(app);
+const path = require("path");
 
-const port = 3000;
-app.use(express.static(__dirname + "/public"));
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+// Serve arquivos estáticos da build
+app.use(express.static(path.join(__dirname, "build")));
+
+// Qualquer rota deve mandar para o index.html (SPA fallback)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
